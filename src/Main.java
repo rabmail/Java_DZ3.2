@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        long Account = 100_00;
-        long Remittance = 1100_00;
-        long Limit = 1000_00;
-        long Bonus = 1_00;
+        long account = 100_00;
+        long remittance = 1100_00;
+        long limit = 1000_00;
+        long bonus = 1_00;
 
-        if (Remittance > Limit) {
+        if (remittance > limit) {
             //отбрасываем дробную часть
-           Bonus =  (Remittance / 100 /100)*Bonus;
-           //сумма на счете если с бонусом
-            Account = Account + Remittance + Bonus;
+            bonus = (remittance / 100 / 100) * bonus;
+            //сумма на счете если с бонусом
+            account = account + remittance + bonus;
         } else {
             //сумма на счете без бонуса
-            Account = Account + Remittance;
+            account = account + remittance;
         }
-        System.out.println(Account);
+        System.out.println(account);
     }
 }
